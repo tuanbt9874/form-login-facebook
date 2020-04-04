@@ -1,0 +1,114 @@
+@import "../color/color.scss";
+@import "../typography/typography.scss";
+
+$break-small: 320px;
+$break-large: 1200px;
+$information-phone: "only screen and (max-width : 320px)";
+
+.container {
+  width: 37%;
+  height: auto;
+  margin: auto auto;
+  box-shadow: 0 0 0.8em rgb(112, 102, 102);
+  & * {
+    font-family: $basic-font;
+  }
+  & a {
+    text-decoration: none;
+    color: $cornflowerblue;
+  }
+
+}
+.login-form {
+  width: 65%;
+  margin: 0 auto 1.25em;
+  & > .form-header {
+    text-align: center;
+    display: block;
+    padding-top: 1.2em;
+    & > h1 {
+      color: $silver;
+      font-weight: 400;
+    }
+  }
+}
+@mixin format-input($width) {
+  padding: 1.2em;
+  border-radius: 5em;
+  border: none;
+  width: $width;
+}
+
+.login-form {
+  & > .form-body > form > input[name="username"],
+  & > .form-body > form > input[name="email"],
+  & > .form-body > form > input[name="password"] {
+    @include format-input(80%);
+    margin: 1em 0.8em;
+    background-color: $smoke;
+  }
+  & > .form-body > form > input[name="checkbox"] {
+    margin: 7% 0 0 7%;
+  }
+  & > .form-body > form > .lb-checkbox {
+    font-size: 0.8em;
+    position: relative;
+  }
+  & > .form-body > form > label > .fa-circle {
+    color: $cornflowerblue;
+  }
+  & > .form-body > form > input[type="submit"] {
+    @include format-input(36%);
+    margin: 1.6em 2em 2em 2em;
+    display: inline-block;
+    background-color: $cornflowerblue;
+    color: $white;
+  }
+  & > .form-body > form > .login {
+    display: inline-block;
+    font-size: 0.8em;
+  }
+}
+.form-footer {
+  width: 100%;
+  padding: 2.5em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $cornflowerblue;
+  position: relative;
+  & > span {
+    display: inline-block;
+    position: absolute;
+    top: -1.75em;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 1em;
+    color: $cornflowerblue;
+    box-shadow: 0 0 0.5em rgb(112, 102, 102);
+  }
+  & > h3 {
+    color: white;
+    font-weight: 400;
+  }
+}
+.group-button {
+  & > a {
+    padding: 0 0.5em;
+    font-size: 2em;
+    color: $white;
+  }
+}
+.my-facebook-button-class {
+  border: none;
+  background-color: inherit;
+}
+.my-facebook-button-class > * {
+  font-size: 2.3em;
+  margin-bottom: 0.05em;
+  margin-right: 0.2em;
+  cursor: pointer;
+  color: white;
+}
